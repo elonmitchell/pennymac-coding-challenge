@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { PHOTO_API_URL, QUOTE_API_URL } from "../config";
 
+const refetchInterval = 15 * 1000;
+
 export const useGetQuotes = () => {
   const [quotes, setQuotes] = useState([]);
   const { data } = useQuery(
@@ -14,9 +16,7 @@ export const useGetQuotes = () => {
       ]);
       return { text: quotes[0].q, background: photo.url };
     },
-    {
-      refetchInterval: 5000,
-    }
+    { refetchInterval }
   );
 
   useEffect(() => {
