@@ -1,0 +1,15 @@
+.quote-wrap {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-text {
+  font-size: 6rem;
+  text-align: center;
+  padding: 5rem;
+  color: blanchedalmond;
+}
