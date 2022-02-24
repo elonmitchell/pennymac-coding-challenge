@@ -6,7 +6,7 @@ import "./RandomQuotePage.css";
 
 export const RandomQuotePage = () => {
   const { quotes } = useGetQuotes();
-  console.log(JSON.stringify(quotes, null, 2))
+
   return (
     <>
       {quotes.map(({ background, text }, index) => (
